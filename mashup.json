@@ -3,6 +3,13 @@
   "version": "1.0.0",
   "name": "Wither Storm x GTA V",
   "tagline": "Cracker's Wither Storm loose in GTA V story mode: it grows over Los Santos and pulls in and devours real GTA cars and people.",
+  "how_to_play": [
+    "Unleash Minecraft's Wither Storm over Los Santos and watch it grow and devour GTA people and cars while you play Steve.",
+    "F9 summons a storm ahead of you (Shift+F9 a grown one), F10 advances its phase, F11 removes it (Shift+F11 starts its death).",
+    "F7 toggles the passthrough, F8 re-levels the Minecraft ground; mouse attacks and uses, wheel or 1-9 the hotbar.",
+    "Press Play: Minecraft loads its passthrough world first; leave it open, then pick Story Mode in GTA V.",
+    "Wait for Minecraft passthrough connected; in a new game press F7 to play the prologue, then F7 again in Los Santos."
+  ],
   "kind": "passthrough",
   "games": [
     {
