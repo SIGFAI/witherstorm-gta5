@@ -1,0 +1,247 @@
+{
+  "id": "sigf/witherstorm-gta5",
+  "version": "1.0.0",
+  "name": "Wither Storm x GTA V",
+  "tagline": "Cracker's Wither Storm loose in GTA V story mode: it grows over Los Santos and pulls in and devours real GTA cars and people.",
+  "kind": "passthrough",
+  "games": [
+    {
+      "game": "gta5",
+      "role": "host",
+      "label": "GTA V Legacy",
+      "engine": "GTA V Legacy (RAGE, story mode) + ScriptHookV ASI MCPassthrough (C++) + ReShade add-on",
+      "apps": {
+        "steam": "271590"
+      },
+      "runtime": "GTA V Legacy (GTA5.exe), a build your ScriptHookV supports (up to 3889); Enhanced is not supported"
+    },
+    {
+      "game": "minecraft",
+      "role": "guest",
+      "label": "Minecraft",
+      "engine": "Minecraft Java 1.20.1 + Forge 47.4.10 mod passthrough-forge + Cracker's Wither Storm Mod 4.2.1",
+      "mc": "1.20.1",
+      "loader": "forge@47.4.10",
+      "java": "17"
+    }
+  ],
+  "requires": [
+    {
+      "id": "scripthookv",
+      "page": "https://www.dev-c.com/gtav/scripthookv/",
+      "license": "Alexander Blade: free, not redistributable",
+      "note": "ScriptHookV for your GTA V Legacy build: copy ScriptHookV.dll and dinput8.dll from its bin folder into the GTA V folder"
+    },
+    {
+      "id": "reshade",
+      "version": "6.8.0 (add-on)",
+      "license": "BSD-3-Clause, shipped unchanged",
+      "page": "https://reshade.me/",
+      "note": "installed into the GTA V folder by the app as ReShade64.asi",
+      "source": {
+        "url": "https://github.com/SIGFAI/witherstorm-gta5/releases/download/v1.0.0/reshade-6.8.0-addon.zip",
+        "sha256": "d4167356162b209be93b6a35cf7e1253cffb2ac00746cf007a7201d362b00d07"
+      }
+    },
+    {
+      "id": "forge",
+      "version": "47.4.10"
+    },
+    {
+      "id": "witherstorm",
+      "version": "4.2.1",
+      "license": "All Rights Reserved (nonamecrackers2, Nazaru): downloaded from Modrinth, never rehosted",
+      "page": "https://modrinth.com/mod/crackers-wither-storm-mod",
+      "note": "in the Minecraft pack (downloaded from Modrinth)"
+    }
+  ],
+  "install": [
+    {
+      "game": "gta5",
+      "strategy": "game-dir-snapshot",
+      "loader": "scripthookv",
+      "files": [
+        {
+          "src": "reshade-6.8.0-addon.zip",
+          "dst": "{game}",
+          "unpack": true,
+          "contents": [
+            {
+              "path": "reshade-shaders/LICENSE-ReShade.md",
+              "sha256": "237ded5b8344f820113efab1e65e91e1f159d9202c5b4856606a0590d3ffdab0"
+            },
+            {
+              "path": "reshade-shaders/Shaders/ReShade.fxh",
+              "sha256": "6dabfbbaf968c3871905d2ea17f96572ff7b1cec01310b5d0e5252b66b30174f"
+            },
+            {
+              "path": "reshade-shaders/Shaders/ReShadeUI.fxh",
+              "sha256": "78adf672df47460297eb9fe6dd238d2aafa24510b52b84feb1a745dff70eb901"
+            },
+            {
+              "path": "ReShade64.asi",
+              "sha256": "0cee63f9c9f13f3ac909c5b4903f4dbb4b719a7ab3b4f13b0deaf83c814b94f7"
+            }
+          ],
+          "url": "https://github.com/SIGFAI/witherstorm-gta5/releases/download/v1.0.0/reshade-6.8.0-addon.zip",
+          "sha256": "d4167356162b209be93b6a35cf7e1253cffb2ac00746cf007a7201d362b00d07",
+          "size": 2460727
+        },
+        {
+          "src": "witherstorm-gta5-gta5.zip",
+          "dst": "{game}",
+          "unpack": true,
+          "contents": [
+            {
+              "path": "args.txt",
+              "sha256": "0e08ca288106ada67ac9fee4cf146cd7f7dad40c9cc2c29390541a4993b19332"
+            },
+            {
+              "path": "LICENSE-witherstorm-gta5.txt",
+              "sha256": "1ed1271ce16c501b07bb712dc816864f354b93b6f95620203697e2f5bc2d5023"
+            },
+            {
+              "path": "MCPassthrough.asi",
+              "sha256": "677a186f8fdea46c5d6f1f283b78911e7eb414c27cb411a43747f4466a31e337"
+            },
+            {
+              "path": "reshade-shaders/Shaders/MCPassthrough.fx",
+              "sha256": "c25ef306b7223cd17c6bff96d0b3372348968070d19c7f3943c0ac035d08da0d"
+            },
+            {
+              "path": "ReShade.ini",
+              "sha256": "53f1f2a06a4162b151505c432dbcda90b15d361896a41aab9b7fd06753e0394e"
+            },
+            {
+              "path": "ReShadePreset.ini",
+              "sha256": "5eef6bfad216f3d0e92df08ac4137944d8db8fac4228ee955bf66518cb3f85c1"
+            },
+            {
+              "path": "THIRD_PARTY_NOTICES-witherstorm-gta5.md",
+              "sha256": "7ddb8259650f97496143293560f984a2ecae0d21e12abae6ac920dc8f5deddbc"
+            }
+          ],
+          "url": "https://github.com/SIGFAI/witherstorm-gta5/releases/download/v1.0.0/witherstorm-gta5-gta5.zip",
+          "sha256": "afa23b241067de7466cdca8ed9c4f462a3b2d153384737470ea7950cf585bc26",
+          "size": 201222
+        }
+      ]
+    },
+    {
+      "game": "minecraft",
+      "strategy": "mrpack",
+      "pack": {
+        "src": "witherstorm-gta5.mrpack",
+        "url": "https://github.com/SIGFAI/witherstorm-gta5/releases/download/v1.0.0/witherstorm-gta5.mrpack",
+        "sha256": "2d39c71b4cfc634cf0826c5b0db26463dab409ade9f0a6b8f6e5b747ee874211",
+        "size": 105548
+      }
+    }
+  ],
+  "launch": [
+    {
+      "game": "minecraft",
+      "wait": "port:25599"
+    },
+    {
+      "game": "gta5",
+      "args": []
+    }
+  ],
+  "files": [
+    {
+      "name": "reshade-6.8.0-addon.zip",
+      "url": "https://github.com/SIGFAI/witherstorm-gta5/releases/download/v1.0.0/reshade-6.8.0-addon.zip",
+      "sha256": "d4167356162b209be93b6a35cf7e1253cffb2ac00746cf007a7201d362b00d07",
+      "size": 2460727
+    },
+    {
+      "name": "witherstorm-gta5-gta5.zip",
+      "url": "https://github.com/SIGFAI/witherstorm-gta5/releases/download/v1.0.0/witherstorm-gta5-gta5.zip",
+      "sha256": "afa23b241067de7466cdca8ed9c4f462a3b2d153384737470ea7950cf585bc26",
+      "size": 201222
+    },
+    {
+      "name": "witherstorm-gta5.mrpack",
+      "url": "https://github.com/SIGFAI/witherstorm-gta5/releases/download/v1.0.0/witherstorm-gta5.mrpack",
+      "sha256": "2d39c71b4cfc634cf0826c5b0db26463dab409ade9f0a6b8f6e5b747ee874211",
+      "size": 105548
+    }
+  ],
+  "source": {
+    "repo": "https://github.com/VortexisTV/wither-storm-gta5-passthrough",
+    "license": "MIT AND BSD-3-Clause",
+    "upstream_license": "MIT",
+    "tag": "mc-gta5",
+    "commit": "ea6b6ee3241e85f6e87e26bc4b6146df9313cab0",
+    "hosted": "https://github.com/SIGFAI/witherstorm-gta5",
+    "derived_from": {
+      "repo": "https://github.com/rehan-remade/universal-modder",
+      "path": "examples/minecraft-gta5-passthrough",
+      "license": "MIT"
+    },
+    "built": {
+      "by": "SIGF",
+      "commit": "ea6b6ee3241e85f6e87e26bc4b6146df9313cab0",
+      "builder": "AWS EC2 i-0022be8314df37721 (c6i.4xlarge, Windows Server 2022, terminated after the build)",
+      "artifacts": {
+        "LICENSE": "1ed1271ce16c501b07bb712dc816864f354b93b6f95620203697e2f5bc2d5023",
+        "MCPassthrough.asi": "677a186f8fdea46c5d6f1f283b78911e7eb414c27cb411a43747f4466a31e337",
+        "MCPassthrough.fx": "c25ef306b7223cd17c6bff96d0b3372348968070d19c7f3943c0ac035d08da0d",
+        "passthrough-forge-0.1.0.jar": "95c6434843830e0a458e946de0c322f63c2cdbfaa8a86eb4e1cd5c728c809425",
+        "reshade/ReShade.fxh": "6dabfbbaf968c3871905d2ea17f96572ff7b1cec01310b5d0e5252b66b30174f",
+        "reshade/ReShade64.dll": "0cee63f9c9f13f3ac909c5b4903f4dbb4b719a7ab3b4f13b0deaf83c814b94f7",
+        "reshade/ReShade-LICENSE.md": "237ded5b8344f820113efab1e65e91e1f159d9202c5b4856606a0590d3ffdab0",
+        "reshade/ReShadeUI.fxh": "78adf672df47460297eb9fe6dd238d2aafa24510b52b84feb1a745dff70eb901",
+        "THIRD_PARTY_NOTICES.md": "7ddb8259650f97496143293560f984a2ecae0d21e12abae6ac920dc8f5deddbc"
+      }
+    },
+    "bundled": [
+      {
+        "name": "ReShade",
+        "version": "6.8.0",
+        "repo": "https://github.com/crosire/reshade",
+        "commit": "18deaa52de0c425a78b329e9cb3c497281cd00ec",
+        "license": "BSD-3-Clause",
+        "file": "ReShade64.dll from ReShade_Setup_6.8.0_Addon.exe (sha256 afe4c8f13048306307983b8b3d41d5bf00a86820440b0e57dea10950e1176445)",
+        "shaders": {
+          "repo": "https://github.com/crosire/reshade-shaders",
+          "commit": "fd0022170615ce0d8162d219bff07232fa6dd84f",
+          "license": "CC0-1.0"
+        }
+      }
+    ],
+    "linked": [
+      {
+        "name": "Cracker's Wither Storm Mod",
+        "version": "4.2.1",
+        "page": "https://modrinth.com/mod/crackers-wither-storm-mod",
+        "license": "All Rights Reserved",
+        "how": "Modrinth download in the pack; compile-only on the builder"
+      }
+    ]
+  },
+  "media": {},
+  "built_by": {
+    "author": "VortexisTV",
+    "authors": [
+      "VortexisTV",
+      "rehan-remade"
+    ],
+    "packaged_by": "SIGF"
+  },
+  "idea_by": "VortexisTV",
+  "built_at": "2026-10-05T00:00:00.000Z",
+  "status": "beta",
+  "issues": "https://github.com/VortexisTV/wither-storm-gta5-passthrough/issues",
+  "notes": [
+    "You need GTA V Legacy (Steam, GTA5.exe; not the Enhanced edition) and Minecraft: Java Edition. Windows only.",
+    "Install ScriptHookV for your GTA build yourself first (it may not be redistributed): from dev-c.com, copy ScriptHookV.dll and dinput8.dll from its bin folder into the GTA V folder.",
+    "The app adds MCPassthrough.asi, ReShade 6.8.0 (as ReShade64.asi, with ReShade.ini and the MCPassthrough effect) and args.txt (-nobattleye -noBE) to the GTA V folder; Restore removes them and puts back any file they replaced.",
+    "Press Play: Minecraft starts first (the app's Prism instance \"sigf-witherstorm-gta5\", Minecraft 1.20.1, Forge 47.4.10, Java 17, Wither Storm 4.2.1 from Modrinth) and opens its creative \"passthrough\" world; leave its window open. Then GTA V starts with BattlEye off: pick Story Mode yourself.",
+    "In story mode: F9 summons a storm (Shift+F9 a grown one), F10 advances its phase, F11 removes it (Shift+F11 starts its death), F7 toggles the passthrough, F8 re-levels the ground.",
+    "Story mode only, never GTA Online. Back up your saves first.",
+    "The link listens on 127.0.0.1:25599 with no authentication while Minecraft runs (upstream design).",
+    "SIGF build of tag mc-gta5 (ea6b6ee); the upstream release zip is not used. Beta, labeled experimental upstream (issue #1: third-person lock, ghosting): report bugs to the author on the upstream issue tracker."
+  ]
+}
