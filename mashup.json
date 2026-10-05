@@ -235,13 +235,11 @@
   "status": "beta",
   "issues": "https://github.com/VortexisTV/wither-storm-gta5-passthrough/issues",
   "notes": [
-    "You need GTA V Legacy (Steam, GTA5.exe; not the Enhanced edition) and Minecraft: Java Edition. Windows only.",
-    "Install ScriptHookV for your GTA build yourself first (it may not be redistributed): from dev-c.com, copy ScriptHookV.dll and dinput8.dll from its bin folder into the GTA V folder.",
-    "The app adds MCPassthrough.asi, ReShade 6.8.0 (as ReShade64.asi, with ReShade.ini and the MCPassthrough effect) and args.txt (-nobattleye -noBE) to the GTA V folder; Restore removes them and puts back any file they replaced.",
-    "Press Play: Minecraft starts first (the app's Prism instance \"sigf-witherstorm-gta5\", Minecraft 1.20.1, Forge 47.4.10, Java 17, Wither Storm 4.2.1 from Modrinth) and opens its creative \"passthrough\" world; leave its window open. Then GTA V starts with BattlEye off: pick Story Mode yourself.",
-    "In story mode: F9 summons a storm (Shift+F9 a grown one), F10 advances its phase, F11 removes it (Shift+F11 starts its death), F7 toggles the passthrough, F8 re-levels the ground.",
-    "Story mode only, never GTA Online. Back up your saves first.",
-    "The link listens on 127.0.0.1:25599 with no authentication while Minecraft runs (upstream design).",
-    "SIGF build of tag mc-gta5 (ea6b6ee); the upstream release zip is not used. Beta, labeled experimental upstream (issue #1: third-person lock, ghosting): report bugs to the author on the upstream issue tracker."
+    "How it works: Cracker's Wither Storm from Minecraft is drawn into GTA V Legacy story mode, where it grows over Los Santos and pulls in and devours real GTA people and cars. You play Steve in creative mode, driven by GTA's movement and camera.",
+    "Press Play: Minecraft 1.20.1 (Forge, with the Wither Storm mod) starts first and loads its creative \"passthrough\" world by itself; leave its window open. GTA V then starts with BattlEye off: pick Story Mode yourself. GTA shows \"Minecraft passthrough connected\" and the storm keys when linked.",
+    "Keys: F9 summons a storm ahead of you (Shift+F9 an already grown one), F10 advances its phase, F11 removes it (Shift+F11 starts its death). F7 toggles the passthrough, F8 re-levels the Minecraft ground. Mouse: Minecraft attack/use, wheel or 1-9 the hotbar, Tab gun modes.",
+    "You need GTA V Legacy on Steam (GTA5.exe; not the Enhanced edition) and Minecraft: Java Edition, on Windows. Install ScriptHookV for your GTA build yourself (up to build 3889): copy ScriptHookV.dll and dinput8.dll from its bin folder into the GTA V folder.",
+    "Use a Story Mode save past the prologue: the mod is on from the start, so press F7 to turn it off, play the opening mission, then press F7 again in Los Santos. Story mode only, never GTA Online: BattlEye stays off while installed. Back up your saves first.",
+    "The local link has no password while Minecraft runs. Beta, experimental upstream (issue #1 reports a third-person lock and ghosting): report bugs to the author with the Report a bug link."
   ]
 }
