@@ -244,6 +244,7 @@
   "notes": [
     "You need GTA V Legacy on Steam (GTA5.exe; not the Enhanced edition) and Minecraft: Java Edition, on Windows. Install ScriptHookV for your GTA build yourself (up to build 3889): copy ScriptHookV.dll and dinput8.dll from its bin folder into the GTA V folder.",
     "Use a Story Mode save past the prologue: the mod is on from the start, so press F7 to turn it off, play the opening mission, then press F7 again in Los Santos. Story mode only, never GTA Online: BattlEye stays off while installed. Back up your saves first.",
-    "The local link has no password while Minecraft runs. Beta, experimental upstream (issue #1 reports a third-person lock and ghosting): report bugs to the author with the Report a bug link."
+    "The local link has no password while Minecraft runs. Beta, experimental upstream (issue #1 reports a third-person lock and ghosting): report bugs to the author with the Report a bug link.",
+    "Multiplayer: none. Free SIGF servers can't host this mashup: GTA's link writes straight into the Minecraft world running in your own game, so it only works in that single-player world."
   ]
 }
